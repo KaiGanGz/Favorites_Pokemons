@@ -1,0 +1,255 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+}
+
+main .pokemom {
+    display: none;
+    height: 100vh;
+}
+
+main .pokemom.selecionado {
+    display: block;
+}
+
+main .pokemom .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo {
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 95vh;
+    max-width: 390px;
+    z-index: 1;
+
+}
+
+.conteudo .nome-pokemon {
+    color: #ffffff;
+    font-size: 46px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-left: 2%;
+}
+
+.conteudo .descricao {
+    color: #ffffff;
+    font-family: "Rubik";
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    padding-left: 3%;
+    
+}
+
+.conteudo .logo {
+    background-image: url("../img/pokemon-logo.png");
+    background-size: cover;
+    height: 93.05px;
+    width: 256px;
+    margin-bottom: 35px;
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.botoes .botao {
+    border: none;
+    cursor: pointer;
+}
+
+.botoes .botao:hover {
+    box-shadow: -150px 0 0 rgba(226, 226, 226, 0.3) inset;
+}
+
+.botoes .botao .retangulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px; /* Estende a largura de uma ponta a outra do botão */
+    height: 110px; /* Mantém a altura igual à do botão */
+    background-color: rgba(226, 226, 226, 0.3); /* Cor de fundo com 30% de transparência */
+    z-index: -1; /* Coloca o retângulo atrás do botão e da imagem */
+}
+
+.botoes .botao img {
+
+    scale: 0.9; 
+}
+
+
+.botoes .botao.selecionado {
+    background-color: rgba(0, 0, 0, 0.4);
+    pointer-events: none;   
+}
+
+.botoes .botao.selecionado:hover::before {
+    width: 0; /* Anula o efeito de passar o mouse quando o botão está selecionado */
+}
+
+.botoes .botao {
+    border: none;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.botoes .botao img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.botoes .botao::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    transition: width 0.3s ease-in-out;
+}
+
+.botoes .botao:hover::before {
+    width: 100%;
+}
+
+button#charizard.botao {
+    transform: scale(1.1);
+    width: 136px; 
+    height: fit-content; 
+}
+
+button#charizard.botao img {
+    width: 70%; 
+    height: 70%;
+    margin: 15%;
+}
+
+button#greninja.botao {
+    width: 150px; 
+    height: fit-content; 
+}
+
+button#greninja.botao img {
+    width: 70%; 
+    height: 70%;
+    margin: 15%;
+    transform: scaleX(-1);
+}
+
+button#zeraora.botao {
+    width: 150px; 
+    height: fit-content; 
+}
+
+button#zeraora.botao img {
+    width: 80%; 
+    height: 80%;
+    margin: 11%;
+}
+
+button#cinderace.botao {
+    width: 150px; 
+    height: fit-content; 
+}
+
+button#cinderace.botao img {
+    width: 70%; 
+    height: 70%;
+    margin: 15%;
+}
+
+button#pikachu.botao {
+    width: 150px; 
+    height: fit-content; 
+}
+
+button#pikachu.botao img {
+    width: 70%; 
+    height: 70%;
+
+    margin: 16%;
+}
+
+button#solgaleo.botao {
+    width: 150px; 
+    height: fit-content; 
+}
+
+button#solgaleo.botao img {
+    width: 70%; 
+    height: 70%;
+    margin: 15%;
+}
+
+.imagemmod1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 200px;
+}
+
+.imagemmod2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.imagemmod3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagemmod4 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 180px;
+    transform: scaleX(-1);
+}
+
+.imagemmod5 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 180px;
+    transform: scaleX(-1);
+}
